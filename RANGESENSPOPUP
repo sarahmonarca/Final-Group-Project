@@ -1,4 +1,12 @@
 import RPi.GPIO as GPIO
+from tkinter import *
+import tkinter.simpledialog
+import tkinter.messagebox
+from tkinter import ttk
+from time import strftime
+from tkinter import messagebox
+import time
+
 from time import sleep, time
 #constants
 DEBUG = False
