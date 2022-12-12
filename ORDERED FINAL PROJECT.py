@@ -247,30 +247,39 @@ try:
 #         plau = sleep(1)
         seq.append(randint(0,3))
         print(seq)
+        if(DEBUG):
            
            
-        if (len(seq) >= 3):
-            print()
-       
-        print("seq={}".format(seq))
-        if (len(seq) >= 4):
-#                 test right here   i am correct on how to implement the game of the simon
-             playtime = .2
-             delay = .1
-        elif (len(seq) >= 7):
-             playtime = .8
-             delay = .3
-        elif (len(seq) >= 10):
-             playtime = .7
-             delay = .25
-        elif (len(seq) >= 13):
-             playtime = .6
-             delay =.15
-        elif(len(seq) == 15 ):
-            print("")
-            break
-         
-             
+            if (len(seq) >= 3):
+                print()
+           
+            print("seq={}".format(seq))
+            if (len(seq) >= 5):
+                 root4 = Tk()
+                 root4.title("Main")
+                 root4.geometry("550x400")
+                 global e1
+                 global e2
+
+
+                 Label(root4, text = " Dear Batman, \n \n \n I see the woman has told you about her son, \n I knew it would get your attention!. \n So heres the deal Batsy, you complete my riddles, and I will set the boy free. \n Sounds pretty fare doesnt it? \n There are seven riddles that progressively will get harder. \n Once you have completed all of them, \n the boy will be set free. We will start off simply \n ARE YOU READY \n \n \n \n FROM ENIGMA AKA RIDDLER").place(x=5, y=5)
+                 root4.mainloop()
+                 time.sleep(1)
+                 print ("Riddle Complete")
+                 break
+#                  playtime = .2
+#                  delay = .1
+#             elif (len(seq) >= 7):
+#                  playtime = .8
+#                  delay = .3
+#             elif (len(seq) >= 10):
+#                  playtime = .7
+#                  delay = .25
+#             elif (len(seq) >= 13):
+#                  playtime = .6
+#                  delay =.15
+#              
+#                  
         for s in seq:
             if(len(seq) < 15):
                 GPIO.output(leds[s], True)
